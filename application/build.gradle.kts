@@ -1,5 +1,6 @@
 val ktor_version: String by project
 val logback_version: String by project
+val kodein_version: String by project
 val kotlin_version: String by rootProject
 
 plugins {
@@ -23,6 +24,8 @@ dependencies {
     implementation("io.ktor:ktor-serialization-jackson-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
+
+    implementation("org.kodein.di:kodein-di:$kodein_version")
 
     implementation(project(":domain"))
 
