@@ -1,7 +1,7 @@
-val ktor_version: String by project
-val logback_version: String by project
-val kodein_version: String by project
-val kotlin_version: String by rootProject
+val ktorVersion: String by project
+val logbackVersion: String by project
+val kodeinVersion: String by project
+val kotlinVersion: String by rootProject
 
 plugins {
     application
@@ -19,15 +19,18 @@ repositories {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
-    implementation("io.ktor:ktor-serialization-jackson-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
-    implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("io.ktor:ktor-server-core-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-serialization-jackson-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-server-netty-jvm:$ktorVersion")
+    implementation("ch.qos.logback:logback-classic:$logbackVersion")
 
-    implementation("org.kodein.di:kodein-di:$kodein_version")
+    implementation("org.jsoup:jsoup:1.14.3")
+
+    implementation("org.kodein.di:kodein-di-generic-jvm:$kodeinVersion")
 
     implementation(project(":domain"))
+    implementation(project(":infraestructure"))
 
-    testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
+    testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
 }

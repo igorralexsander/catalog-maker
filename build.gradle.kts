@@ -1,6 +1,4 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-val kotlin_version: String by project
-
 
 repositories {
     mavenCentral()
