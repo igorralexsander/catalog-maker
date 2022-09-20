@@ -25,8 +25,6 @@ dependencies {
     implementation("io.ktor:ktor-server-netty-jvm:$ktorVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
 
-    implementation("org.jsoup:jsoup:1.14.3")
-
     implementation("org.kodein.di:kodein-di-generic-jvm:$kodeinVersion")
 
     implementation(project(":domain"))

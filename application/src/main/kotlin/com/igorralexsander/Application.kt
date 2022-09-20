@@ -3,7 +3,6 @@ package com.igorralexsander
 import com.igorralexsander.configuration.configurationModuleConfig
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
-import com.igorralexsander.plugins.*
 import com.typesafe.config.ConfigFactory
 import io.ktor.server.application.*
 import io.ktor.server.config.*
